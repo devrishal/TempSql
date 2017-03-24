@@ -66,7 +66,7 @@ public class QueryDataSeparator {
 					}
 				}
 			}
-			
+			System.out.println("-------------------ColumnName--------------------");
 			for (int i = 0; i < columns.size(); i++) {
 				//GlobalFields globalFieldsVO = new GlobalFields();
 				//globalFieldsVO.setTableName(tableName.getText());
@@ -85,13 +85,11 @@ public class QueryDataSeparator {
 						colName = tempColumn.get(0).getText();
 						System.out.println("colName: "+colName);
 					}
-					//globalFieldsVO.setFunction(functionName);
-					//globalFieldsVO.setName(colName);
-					// globalFieldsVO.setTableName(tableName);
-					//System.out.println(((Column_nameContext) columns.get(i)).getText());// children);
+					
 				}
 
 			}
+			System.out.println("--------------------------------------------------------");
 			MySQLParser.GroupBy_clauseContext groupByClause= selectClause.groupBy_clause();
 			List groupByColName = groupByClause.children;
 			for(int i=0;i<groupByColName.size();i++)
